@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import '../styles/Register.css'
 function Register() {
     const[formData,setFormData]=useState({
         name:'',
@@ -10,7 +10,7 @@ function Register() {
     console.log(formData);
   return (
     <div>
-      <form>
+      <form className="registerForm">
         <h2>Register</h2>
         <input type="text" placeholder="Name" 
             value={formData.name}
@@ -28,7 +28,10 @@ function Register() {
           value={formData.confirmPassword}
           onChange={(e)=>{setFormData({...formData,confirmPassword:e.target.value})}}
           />
-        <button>Register</button>
+        <div>
+        <a>Already have an account ??</a>
+        </div>
+        <button type="submit">Register</button>
       </form>
     </div>
   )

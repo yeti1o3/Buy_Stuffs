@@ -1,0 +1,12 @@
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loginForm input{
+    width: 90%;
+}
+.loginForm a{
+    font-size: 0.75rem;
+    text-decoration: none   ;
+}

@@ -1,0 +1,14 @@
+.registerForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.registerForm input{
+    width: 90%;
+}
+.registerForm a{
+    font-size: 0.7rem;
+    text-decoration: none;
+    margin-left: 0;
+}   
