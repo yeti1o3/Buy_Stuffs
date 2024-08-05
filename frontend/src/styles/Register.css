@@ -11,4 +11,9 @@
     font-size: 0.7rem;
     text-decoration: none;
     margin-left: 0;
-}   
+}  
+.registerCheckbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 

@@ -2,15 +2,15 @@ import { useState } from "react"
 import '../styles/Login.css'
 function Login() {
     const[formData,setFormData]=useState({
-        username:"",
+        Email:"",
         password:""
     })
   return (
     <div>
       <form className="loginForm">
         <h2>Login</h2>
-        <input type="text" placeholder="Username" value={formData.username}
-            onChange={(e)=>{setFormData({...formData,username:(e.target.value)})}}
+        <input type="text" placeholder="Email" value={formData.Email}
+            onChange={(e)=>{setFormData({...formData,Email:(e.target.value)})}}
         />
 
         <input type="password" placeholder="Password" value={formData.password}
