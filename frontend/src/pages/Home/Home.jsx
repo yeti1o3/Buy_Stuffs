@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
     const dispatch=useDispatch();
     const data=useSelector((state)=>state.products);
     const products=data.products;
-    console.log(data);
     useEffect(()=>{
      const fetchData=async()=>{
       try{
@@ -28,9 +27,9 @@ import { Link } from "react-router-dom";
   return (
     <Grid container spacing={2}>
         {products.map((product) => (
-          <Grid item key={product.product_id} xs={12} sm={6} md={4} lg={3}>
+          <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
             <Link to={`productdetail/${product.id}`}>
-            <Product product={product} />
+            <Product key={product.id} product={product} />
             </Link>
           </Grid>
         ))}

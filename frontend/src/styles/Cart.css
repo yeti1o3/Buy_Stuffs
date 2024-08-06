@@ -1,0 +1,10 @@
+.Cart{
+    width: 100vw;
+    height: 100vh;
+}
+.CartItem{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    justify-content: space-around;
+}

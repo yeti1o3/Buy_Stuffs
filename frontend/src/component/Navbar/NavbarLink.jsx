@@ -4,7 +4,7 @@ import { Avatar, Box, IconButton, Badge } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
+import { useSelector } from 'react-redux';
 const NavbarContainer = styled(Box)({
   display: 'flex',
   justifyContent: 'center',
@@ -28,7 +28,8 @@ const CustomIconButton = styled(IconButton)({
 });
 
 const NavbarLink = ({user}) => {
-    console.log(user)
+    const cartTotal=useSelector((state)=>state.cart).totalQuantity;
+
   return (
     <NavbarContainer>
       <div>
@@ -46,7 +47,7 @@ const NavbarLink = ({user}) => {
       <div>
         <Link to={'/cart'}>
         <CustomIconButton aria-label="cart">
-          <Badge badgeContent={5} color="secondary">
+          <Badge badgeContent={cartTotal} color="secondary">
             <ShoppingCartIcon sx={{color:'white'}} />
           </Badge>
         </CustomIconButton>
