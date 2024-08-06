@@ -48,7 +48,7 @@ const NavbarLink = ({user}) => {
         <Link to={'/cart'}>
         <CustomIconButton aria-label="cart">
           <Badge badgeContent={cartTotal} color="secondary">
-            <ShoppingCartIcon sx={{color:'white'}} />
+            <ShoppingCartIcon sx={{color:'black'}} />
           </Badge>
         </CustomIconButton>
         </Link>

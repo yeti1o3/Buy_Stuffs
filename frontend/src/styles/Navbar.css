@@ -8,3 +8,6 @@
     gap:10px;
     align-items: center;
 }
+.Navbar a{
+    text-decoration: none;
+}

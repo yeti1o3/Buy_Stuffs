@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <nav className="Navbar">
         <div>
-            <Link to={'/'}>Buy Stuff</Link>
+            <Link to={'/'}><h1>Buy Stuff</h1></Link>
         </div>
         <NavbarLink user={user}/>
     </nav>
