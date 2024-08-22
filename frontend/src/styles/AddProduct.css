@@ -1,0 +1,19 @@
+.AddProduct{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.AddProduct form{
+    width: 70%;
+}
+.AddProduct form input{
+    width: 90%;
+}
+
+.AddProduct form textarea{
+    width: 90%;
+    height: fit-content;
+}

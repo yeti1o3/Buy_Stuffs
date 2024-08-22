@@ -1,22 +1,19 @@
 import { useEffect } from "react"
-import {useDispatch,useSelector} from 'react-redux'
+import {useSelector} from 'react-redux'
 import { Grid } from "@mui/material";
-import { setProducts } from "../../feature/products/productsSlice";
 import Product from "../../component/Product/Product";
 import '../../styles/Home.css'
 import axios from 'axios'
 import { Link } from "react-router-dom";
  function Home() {
-    const dispatch=useDispatch();
     const data=useSelector((state)=>state.products);
     const products=data.products;
     useEffect(()=>{
      const fetchData=async()=>{
       try{
-        const res=await axios.get('https://dummyjson.com/products');
+        const res=await axios.get('/api/product/products');
         if(res){
-          const data=res.data;
-          dispatch(setProducts(data));
+          console.log(res);
         }
       } catch(err){
         console.log(err);
